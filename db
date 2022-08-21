@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS `results` (`match_id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT, `match_start` DATETIME NOT NULL, `match_end` DATETIME NOT NULL, `map` VARCHAR(64) NOT NULL, `max_rounds` TINYINT(3) unsigned NOT NULL, `overtime_max_rounds` TINYINT(3) UNSIGNED NOT NULL, `overtime_count` TINYINT(3) UNSIGNED NOT NULL, `played_out` TINYINT(1) NOT NULL, `t_name` VARCHAR(128) NOT NULL, `t_overall_score` TINYINT(3) UNSIGNED NOT NULL, `t_first_half_score` TINYINT(3) UNSIGNED NOT NULL, `t_second_half_score` TINYINT(3) UNSIGNED NOT NULL, `t_overtime_score` TINYINT(3) UNSIGNED NOT NULL, `ct_name` VARCHAR(128) NOT NULL, `ct_overall_score` TINYINT(3) UNSIGNED NOT NULL, `ct_first_half_score` TINYINT(3) UNSIGNED NOT NULL, `ct_second_half_score` TINYINT(3) UNSIGNED NOT NULL, `ct_overtime_score` TINYINT(3) UNSIGNED NOT NULL, 'demo' VARCHAR(128), PRIMARY KEY (`match_id`));
+
+
+ CREATE TABLE IF NOT EXISTS `stats` (`key_id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT, `match_id` INT(11) unsigned NOT NULL, `rounds_played` TINYINT(3) unsigned NOT NULL,
+ `player_name` VARCHAR(64) NOT NULL, `steam_id_64` VARCHAR(20) NOT NULL, `team` TINYINT(1) NOT NULL, `kills` TINYINT(2) NOT NULL, `deaths` TINYINT(2) NOT NULL, `assists` TINYINT(2) NOT NULL,
+ `head_shots` TINYINT(2) NOT NULL, `team_kills` TINYINT(2) NOT NULL, `assists_team_attack` TINYINT(2) NOT NULL,
+ `damage` INT(4) NOT NULL, `hits` INT(4) NOT NULL, `shots` INT(4) NOT NULL, `last_alive` TINYINT(1) NOT NULL, `clutch_won` TINYINT(1) NOT NULL, `1k` TINYINT(2) NOT NULL, `2k` TINYINT(2) NOT NULL,
+ `3k` TINYINT(2) NOT NULL, `4k` TINYINT(2) NOT NULL, `5k` TINYINT(2) NOT NULL, PRIMARY KEY (`key_id`)); 
